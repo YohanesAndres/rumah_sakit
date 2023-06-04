@@ -11,7 +11,7 @@
                 <label for="pengobatan_id">Pengobatan</label>
                 <select class="form-control" id="pengobatan_id" name="pengobatan_id">
                     @foreach ($pengobatans as $pengobatan)
-                        <option value="{{ $pengobatan->id }}">{{ $pengobatan->id }}</option>
+                        <option value="{{ $pengobatan->id }}">{{ $pengobatan->pasien->nama }}</option>
                     @endforeach
                 </select>
             </div>
