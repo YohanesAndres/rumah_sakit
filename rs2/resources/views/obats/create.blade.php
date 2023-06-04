@@ -1,0 +1,21 @@
+<!-- resources/views/obats/create.blade.php -->
+
+@extends('layouts.app')
+
+@section('content')
+    <div class="container">
+        <h1>Tambah Obat</h1>
+        <form action="{{ route('obats.store') }}" method="POST">
+            @csrf
+            <div class="form-group">
+                <label for="nama">Nama</label>
+                <input type="text" name="nama" id="nama" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="stok">Stok</label>
+                <input type="number" name="stok" id="stok" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Simpan</button>
+        </form>
+    </div>
+@endsection
